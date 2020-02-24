@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "intra_models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/intra_models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/intra_models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "intra_models/1.0.0": {
+      "type": "project",
+      "path": "../intra_models/intra_models.csproj",
+      "msbuildProject": "../intra_models/intra_models.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "intra_models >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\1555489\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\0ss_intra\\Dupont\\wpf_intra\\wpf_intra\\wpf_intra.csproj",
+      "projectName": "wpf_intra",
+      "projectPath": "D:\\0ss_intra\\Dupont\\wpf_intra\\wpf_intra\\wpf_intra.csproj",
+      "packagesPath": "C:\\Users\\1555489\\.nuget\\packages\\",
+      "outputPath": "D:\\0ss_intra\\Dupont\\wpf_intra\\wpf_intra\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\1555489\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "D:\\0ss_intra\\Dupont\\wpf_intra\\intra_models\\intra_models.csproj": {
+              "projectPath": "D:\\0ss_intra\\Dupont\\wpf_intra\\intra_models\\intra_models.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

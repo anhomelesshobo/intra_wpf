@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "wpf_intra/1.0.0": {
+        "dependencies": {
+          "intra_models": "1.0.0"
+        },
+        "runtime": {
+          "wpf_intra.dll": {}
+        }
+      },
+      "intra_models/1.0.0": {
+        "runtime": {
+          "intra_models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "wpf_intra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "intra_models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,77 @@
+﻿<Window x:Class="wpf_intra.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        DataContext="{Binding RelativeSource={RelativeSource self}}"
+        mc:Ignorable="d"
+        Title="Gestion de Clients" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" ></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.ColumnSpan="2" Background="LightGray">
+            <Menu Width="50" Background="LightGray" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <MenuItem Width="69" Header="Fichier" Height="20">
+                    <TextBlock Text="Ouvrir..." ></TextBlock>
+                    <TextBlock Text="Sauvegarder" ></TextBlock>
+                    <TextBlock Text="Fermer" ></TextBlock>
+                    <TextBlock Text="Nouveau Client"></TextBlock>
+                    <TextBlock Text="Quitter" ></TextBlock>
+                </MenuItem>
+            </Menu>
+            <RibbonButton Width="70" HorizontalAlignment="Left" Label="Edition" MouseOverBackground="LightBlue"  MouseOverBorderBrush="DarkGray"></RibbonButton>
+            <RibbonButton Width="70" HorizontalAlignment="Left" Label="Affichage" MouseOverBackground="LightBlue"  MouseOverBorderBrush="DarkGray"></RibbonButton>
+        </DockPanel>
+        <TextBlock Text="Liste des Clients" Grid.Row="1" HorizontalAlignment="Left" Width="100"></TextBlock>
+        <Button  Click="Newcustomer"  Content="Nouveau Clients" Width="100" Margin="0,0,10,0"  Grid.Row="1"></Button>
+        <ListView SelectionChanged="selected" ItemsSource="{Binding customers}" Grid.Row="2" Grid.RowSpan="7" Name="Listview">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}">
+                             <TextBlock Text=" , ">
+                                  <TextBlock Text="{Binding LastName}"></TextBlock>
+                             </TextBlock>
+                        </TextBlock>
+                       
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBlock Text="Prénom:" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"></TextBlock>
+        <TextBox Text="{Binding CurrentCustomer.Name}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="60,0,0,0" Width="150"></TextBox>
+        <TextBlock Text="Nom:" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <TextBox Text="{Binding CurrentCustomer.LastName}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,60,0" Width="150" ></TextBox>
+        <TextBlock Text="Adresse:" Width="50" Margin="5,0,0,0" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
+        <TextBox Text="{Binding CurrentCustomer.Address}" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="60,0,0,0" Width="300"></TextBox>
+        <TextBlock Text="Ville:" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Column="2" Grid.Row="4" VerticalAlignment="Center"></TextBlock>
+        <TextBox Text="{Binding CurrentCustomer.City}" Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="60,0,0,0" Width="220"></TextBox>
+        <TextBlock Text="Province:" Margin="130,0,0,0" Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" ></TextBlock>
+        <TextBox Text="{Binding CurrentCustomer.Province}" Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,60,0" Width="65"></TextBox>
+        <TextBlock HorizontalAlignment="Left" Text="Code postal:" Margin="5,0,0,0" Grid.Column="2" Grid.Row="5" VerticalAlignment="Center"></TextBlock>
+        <TextBox Text="{Binding CurrentCustomer.PostalCode}" Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="90,0,0,0" Width="190"></TextBox>
+        <TextBlock HorizontalAlignment="Left" Text="Contact:" Margin="5,0,0,0" Grid.Column="2" Grid.Row="6" VerticalAlignment="Center"></TextBlock>
+        <TextBox  Text="{Binding CurrentCustomer.ContactInfo}" Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="60,0,0,0" Width="220"></TextBox>
+        <Button Click="del_button"  Grid.Column="2" Grid.Row="7" Width="200" Height="20" Content="SupprimerClient"></Button>
+        <Image Source="{Binding CurrentCustomer.PicturePath}" Grid.Column="2" Grid.Row="8" Width="250" Height="180"></Image>
+        <StatusBar Grid.Row="9" Grid.ColumnSpan="2">
+            <TextBlock Text="Client selectionné:"></TextBlock>
+            <TextBlock Text="{Binding CurrentCustomer.Name}"></TextBlock>
+            <TextBlock Text="{Binding CurrentCustomer.LastName}"></TextBlock>
+        </StatusBar>
+    </Grid>
+</Window>

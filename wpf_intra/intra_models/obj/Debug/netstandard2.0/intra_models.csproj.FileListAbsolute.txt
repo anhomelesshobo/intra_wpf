@@ -1,0 +1,8 @@
+D:\0ss_intra\Dupont\wpf_intra\intra_models\bin\Debug\netstandard2.0\intra_models.deps.json
+D:\0ss_intra\Dupont\wpf_intra\intra_models\bin\Debug\netstandard2.0\intra_models.dll
+D:\0ss_intra\Dupont\wpf_intra\intra_models\bin\Debug\netstandard2.0\intra_models.pdb
+D:\0ss_intra\Dupont\wpf_intra\intra_models\obj\Debug\netstandard2.0\intra_models.csprojAssemblyReference.cache
+D:\0ss_intra\Dupont\wpf_intra\intra_models\obj\Debug\netstandard2.0\intra_models.AssemblyInfoInputs.cache
+D:\0ss_intra\Dupont\wpf_intra\intra_models\obj\Debug\netstandard2.0\intra_models.AssemblyInfo.cs
+D:\0ss_intra\Dupont\wpf_intra\intra_models\obj\Debug\netstandard2.0\intra_models.dll
+D:\0ss_intra\Dupont\wpf_intra\intra_models\obj\Debug\netstandard2.0\intra_models.pdb
